@@ -15,12 +15,19 @@ make run
 
 ### Use
 
-Get HTML from url
+Obtain HTML from url
 ```
-http://localhost:8001/?url=URL_TO_SCRAP
+POST http://localhost:8001/
+BODY {
+  "url": "URL_TO_SCRAP"
+}
 ```
 
-Get HTML from url + xpath
+Obtain values from url + [ xpath ]
 ```
-http://localhost:8001/url=URL_TO_SCRAP&xpath=XPATH_SELECTOR
+POST http://localhost:8001/
+BODY {
+  "url": "URL_TO_SCRAP",
+  "xpath": [ "xpath1", "xpath2", ..., "xpathN"
+}
 ```
